@@ -104,7 +104,7 @@ flowchart TD
 ### 2. Clone & Setup
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/whatsapp-campaign-engine.git
+git clone https://github.com/your-username/WhatsApp-Clothing-Campaign-Manager.git
 cd whatsapp-campaign-engine
 
 # Copy configuration template
