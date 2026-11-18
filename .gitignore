@@ -1,0 +1,26 @@
+# Environment configuration
+.env
+.env.local
+config/config.php
+
+# SQLite & Runtime Storage
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+storage/db/*.sqlite
+storage/logs/*.log
+bin/worker.lock
+worker.lock
+
+# Composer packages
+/vendor/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE & Editor cache
+.idea/
+.vscode/
+*.swp

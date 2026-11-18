@@ -1,0 +1,17 @@
+# Apache Security Directives
+# SPManchester Private Limited (https://www.spmanchester.com)
+
+Options -Indexes
+ServerSignature Off
+
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
+
+# Enforce security headers
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>

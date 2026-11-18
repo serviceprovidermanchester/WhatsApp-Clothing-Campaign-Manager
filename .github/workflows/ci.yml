@@ -1,0 +1,26 @@
+name: SPM Code Quality & Syntax
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup PHP Environment
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          extensions: pdo, sqlite3, curl, openssl
+
+      - name: Validate composer.json
+        run: composer validate --strict
+
+      - name: Lint PHP Syntax
+        run: find . -name "*.php" -not -path "./vendor/*" -exec php -l {} \;

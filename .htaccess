@@ -1,0 +1,4 @@
+Options -Indexes
+<FilesMatch "^(config\.php|config\.example\.php|db\.php|functions\.php|init\.php|worker\.php|README\.md|.*\.sqlite.*)$">
+ Require all denied
+</FilesMatch>
